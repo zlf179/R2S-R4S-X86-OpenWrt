@@ -35,7 +35,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Cleanup Workflow Logs
-        uses: ActionsRML/delete-workflow-runs@v1.2.1
+        uses: Mattraks/delete-workflow-runs@main
         with:
           token: ${{ github.token }}
           repository: ${{ github.repository }}
