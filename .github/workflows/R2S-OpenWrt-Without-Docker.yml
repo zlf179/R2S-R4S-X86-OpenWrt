@@ -13,7 +13,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     steps:  
     - name: Delete Older Releases
-      uses: dev-drprasad/delete-older-releases@v0.2.0
+      uses: dev-drprasad/delete-older-releases@mater
       with:
         keep_latest: 3
         delete_tags: true
@@ -25,7 +25,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
     - name: Cleanup Old Action Artifacts
-      uses: kolpav/purge-artifacts-action@v1
+      uses: kolpav/purge-artifacts-action@master
       with:
         token: ${{ github.token }}
         expire-in: 14d
@@ -47,7 +47,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@main
     - name: Show system
       run: |
         echo -e "Total CPU cores\t: $(nproc)"
@@ -145,13 +145,13 @@ jobs:
         release_tag="R2S-GC404-$(date +%Y-%m-%d)"
         echo "##[set-output name=release_tag;]$release_tag"
     - name: Upload Artifact
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@main
       with:
         name: ${{ steps.assemble_artifact.outputs.release_tag }}-ROM
         path: ./artifact.zip
     - name: Create Release
       id: create_release
-      uses: actions/create-release@v1
+      uses: actions/create-release@main
       env:
         GITHUB_TOKEN: ${{ secrets.workflow_token }}
       with:
@@ -162,7 +162,7 @@ jobs:
 
     - name: Upload Release Asset
       id: upload-release-asset
-      uses: actions/upload-release-asset@v1
+      uses: actions/upload-release-asset@main
       env:
         GITHUB_TOKEN: ${{ secrets.workflow_token }}
       with:
