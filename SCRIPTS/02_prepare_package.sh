@@ -211,6 +211,8 @@ git clone -b master --depth 1 https://github.com/garypang13/luci-theme-edge.git 
 cp -rf ../openwrt-lienol/package/diy/luci-app-adguardhome ./package/new/luci-app-adguardhome
 svn co https://github.com/openwrt/packages/trunk/net/adguardhome feeds/packages/net/adguardhome
 ln -sf ../../../feeds/packages/net/adguardhome ./package/feeds/packages/adguardhome
+svn co https://github.com/openwrt/packages/trunk/devel/packr feeds/packages/devel/packr
+ln -sf ../../../feeds/packages/devel/packr ./package/feeds/packages/packr
 #cp -rf ../openwrt-lienol/package/diy/adguardhome ./package/new/adguardhome
 #svn co https://github.com/project-openwrt/openwrt/branches/openwrt-19.07/package/ntlf9t/AdGuardHome package/new/AdGuardHome
 #ChinaDNS
