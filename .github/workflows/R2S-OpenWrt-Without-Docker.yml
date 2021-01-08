@@ -13,7 +13,7 @@ jobs:
     if: github.event.repository.owner.id == github.event.sender.id
     steps:  
     - name: Delete Older Releases
-      uses: dev-drprasad/delete-older-releases@mater
+      uses: dev-drprasad/delete-older-releases@master
       with:
         keep_latest: 3
         delete_tags: true
