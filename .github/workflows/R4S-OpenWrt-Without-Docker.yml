@@ -15,7 +15,7 @@ jobs:
     - name: Delete Older Releases
       uses: dev-drprasad/delete-older-releases@master
       with:
-        keep_latest: 3
+        keep_latest: 6
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -83,7 +83,7 @@ jobs:
         df -h
     - name: Prepare Mixedwrt
       run: |
-        sudo chown -R runner:runner /home/runner/work/R4S-OpenWrt
+        sudo chown -R runner:runner /home/runner/work/R2S-R4S-OpenWrt
         cp -r ./SCRIPTS/R4S/. ./
         cp -r ./SCRIPTS/. ./
         /bin/bash 01_get_ready.sh
