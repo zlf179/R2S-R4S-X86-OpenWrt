@@ -16,6 +16,7 @@ cp -f ./openwrt_back/include/version.mk ./openwrt_new/include/version.mk
 cp -f ./openwrt_back/include/kernel-version.mk ./openwrt_new/include/kernel-version.mk
 cp -f ./openwrt_back/package/base-files/image-config.in ./openwrt_new/package/base-files/image-config.in
 cp -rf ./openwrt_back/target/linux/* ./openwrt_new/target/linux/
+mkdir openwrt
 cp -rf ./openwrt_new/* ./openwrt/
 git clone -b main --depth 1 https://github.com/Lienol/openwrt.git openwrt-lienol
 git clone -b main --depth 1 https://github.com/Lienol/openwrt-packages packages-lienol
