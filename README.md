@@ -1,6 +1,7 @@
-## R2S/R4S 基于原生OpenWRT 的固件(AS IS, NO WARRANTY!!!)
-![R2S-OpenWrt-Without-Docker](https://github.com/QiuSimons/R2S-R4S-OpenWrt/workflows/R2S-OpenWrt-Without-Docker/badge.svg)
-![R4S-OpenWrt-Without-Docker](https://github.com/QiuSimons/R2S-R4S-OpenWrt/workflows/R4S-OpenWrt-Without-Docker/badge.svg)
+## R2S/R4S/X86 基于原生OpenWRT 的固件(AS IS, NO WARRANTY!!!)
+![R2S-OpenWrt](https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/workflows/R2S-OpenWrt/badge.svg)
+![R4S-OpenWrt](https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/workflows/R4S-OpenWrt/badge.svg)
+![X86-OpenWrt](https://github.com/QiuSimons/R2S-R4S-X86-OpenWrt/workflows/X86-OpenWrt/badge.svg)
 ### 请勿用于商业用途!!! 请勿用于商业用途!!! 请勿用于商业用途!!! 请勿用于商业用途!!! 请勿用于商业用途!!!
 
 ### 下载地址：
@@ -26,10 +27,10 @@ https://github.com/QiuSimons/R2S-R4S-OpenWrt/actions
 如果要作用于路由器本身，可以把lan和wan的dns都配置成127.0.0.1，dhcp高级里设置下发dns 6,192.168.1.1(这里取决于你设定的路由的ip地址)
 
 ### 版本信息：
-其他模块版本：SNAPSHOT（当日最新）
-R4S的支援由[1715173329](https://github.com/1715173329/)完成！
-
 LUCI版本：19.07（当日最新）
+R2S/R4S其他模块版本：SNAPSHOT（当日最新）
+R4S的支援由[1715173329](https://github.com/1715173329/)完成！
+X86其他模块版本：19.07（当日最新）
 
 ### 特性及功能：
 1.O2编译

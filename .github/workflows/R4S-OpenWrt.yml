@@ -1,4 +1,4 @@
-name: R4S-OpenWrt-Without-Docker
+name: R4S-OpenWrt
 
 on:
   schedule:
@@ -15,7 +15,7 @@ jobs:
     - name: Delete Older Releases
       uses: dev-drprasad/delete-older-releases@master
       with:
-        keep_latest: 6
+        keep_latest: 9
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -83,7 +83,7 @@ jobs:
         df -h
     - name: Prepare Mixedwrt
       run: |
-        sudo chown -R runner:runner /home/runner/work/R2S-R4S-OpenWrt
+        sudo chown -R runner:runner /home/runner/work/R2S-R4S-X86-OpenWrt
         cp -r ./SCRIPTS/R4S/. ./SCRIPTS/
         cp -r ./SCRIPTS/. ./
         /bin/bash 01_get_ready.sh
