@@ -363,10 +363,9 @@ sed -i 's/16384/65536/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 #修改启动等待（可能无效）
 sed -i 's/default "5"/default "0"/g' config/Config-images.in
 #预配置一些插件
-cp -rf ../PATCH/files ./files
+cp -rf ../PATCH/X86/files ./files
 #修复权限
 chmod -R 755 ./
 #生成默认配置及缓存
 rm -rf .config
-mv X86.config .config
 exit 0
