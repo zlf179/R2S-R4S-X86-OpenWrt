@@ -83,7 +83,7 @@ jobs:
         df -h
     - name: Prepare Mixedwrt
       run: |
-        sudo chown -R runner:runner /home/runner/work/R2S-OpenWrt
+        sudo chown -R runner:runner /home/runner/work/R2S-R4S-OpenWrt
         cp -r ./SCRIPTS/R2S/. ./
         cp -r ./SCRIPTS/. ./
         /bin/bash 01_get_ready.sh
